@@ -1,0 +1,35 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Main Content Spacing Adjustments */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding-top: 0; /* Remove extra space at the top */
+  padding-bottom: 0; /* Remove extra space at the bottom */
+}
+
+/* Profile Image Proper Positioning */
+.profile-image {
+  max-height: 90vh; /* Keeps image size natural */
+  object-fit: contain;
+}
+
+/* Footer Directly Below Content */
+footer {
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+}
