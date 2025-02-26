@@ -7,7 +7,7 @@ export default function Home() {
       <div className="md:w-1/2 flex items-center">
         <div className="space-y-6">
           <h1 className="text-5xl font-bold text-white leading-tight">
-            Hi, I&aposm Yash Gawankar 👋
+            Hi, I&aposm Yash Gawankar!
           </h1>
           <p className="text-lg text-gray-300">
             I specialize in Recommender Systems, AI, and scalable ML solutions. Passionate about real-time AI, personalization, and large-scale deployment.
