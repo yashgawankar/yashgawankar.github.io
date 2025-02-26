@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disable Next.js image optimization (GitHub Pages doesn't support it)
   },
-  basePath: "/yashgawankar.github.io", // Set your repo name as basePath
-  assetPrefix: "", // Ensure assets load correctly
+  basePath: "/", // Set your repo name as basePath
+  assetPrefix: "/", // Ensure assets load correctly
 };
 
 export default nextConfig;
