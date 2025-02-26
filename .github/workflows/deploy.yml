@@ -3,28 +3,36 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Runs when pushing to the main branch
-  workflow_dispatch:  # Allows manual triggering
+      - main  # Deploy on push to main
 
 permissions:
-  contents: write
+  contents: write  # Allows writing to gh-pages branch
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-      - name: Build Next.js app
-        run: npm run build && npm run export
+      - name: Install Dependencies
+        run: npm ci  # Installs exact dependencies from package-lock.json
+
+      - name: Build Next.js
+        run: npm run build
+
+      - name: Export Static Site
+        run: npm run export  # Generates static files in 'out/'
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Deploy to the gh-pages branch
-          folder: out  # Serve from the out/ directory
+          branch: gh-pages  # Deploy to gh-pages branch
+          folder: out       # Deploy 'out/' directory
+          clean: true       # Remove old files before deploying
