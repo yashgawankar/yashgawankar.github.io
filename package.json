@@ -22,8 +22,8 @@
   "homepage": "https://yashgawankar.github.io",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "deploy": "npm run build && gh-pages -d out"
+    "build": "next build",
+    "deploy": "next build && gh-pages -d out"
   }
 }
 
