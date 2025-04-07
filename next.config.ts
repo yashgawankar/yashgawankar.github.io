@@ -5,8 +5,8 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  basePath: '',
-  assetPrefix: './', // 🔥 KEY for GitHub Pages to load CSS/JS from correct relative paths
+  basePath: '', // no subfolder!
+  assetPrefix: '/', // ✅ must start with a slash for next/font to work
 }
 
 export default nextConfig
