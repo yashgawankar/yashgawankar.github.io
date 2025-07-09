@@ -1,10 +1,9 @@
-# .github/workflows/deploy.yml
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Or 'master' if that’s your default branch
+      - main
 
 permissions:
   contents: write
@@ -25,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build static site
+      - name: Build and Export
         run: npm run build && npm run export
 
       - name: Deploy to GitHub Pages
