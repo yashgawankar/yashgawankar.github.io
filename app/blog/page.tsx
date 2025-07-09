@@ -21,7 +21,7 @@ export default function Home() {
               </button>
             </Link>
             <a
-              href="/Yash Gawankar - Internship Resume.pdf"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
